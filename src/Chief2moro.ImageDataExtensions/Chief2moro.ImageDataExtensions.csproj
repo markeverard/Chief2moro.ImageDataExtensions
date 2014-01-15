@@ -168,7 +168,7 @@
     <Compile Include="ImageWidthDescriptorAttribute.cs" />
     <Compile Include="Orientation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequiredImageSize.cs" />
+    <Compile Include="RequiredImageSizeAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Chief2moro.ImageDataExtensions.nuspec" />
