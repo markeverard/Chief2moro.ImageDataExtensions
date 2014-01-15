@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chief2moro.ImageDataExtensions", "Chief2moro.ImageDataExtensions\Chief2moro.ImageDataExtensions.csproj", "{1B3BE7C9-666E-4743-A944-5F70BC57DD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chief2moro.ImageDataExtensions.Test", "Chief2moro.ImageDataExtensions.Test\Chief2moro.ImageDataExtensions.Test.csproj", "{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B3BE7C9-666E-4743-A944-5F70BC57DD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3BE7C9-666E-4743-A944-5F70BC57DD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3BE7C9-666E-4743-A944-5F70BC57DD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3BE7C9-666E-4743-A944-5F70BC57DD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
