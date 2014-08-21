@@ -169,6 +169,7 @@
     <Compile Include="Orientation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RequiredImageSizeAttribute.cs" />
+    <Compile Include="RequiredImageSizeRangeAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Chief2moro.ImageDataExtensions.nuspec" />
