@@ -51,10 +51,10 @@ namespace Chief2moro.ImageDataExtensions
                 return false;
             }
 
-            var imageData = content as ImageData;
+            var imageData = content as IContentImage;
             if (imageData == null)
             {
-                ErrorMessage = "RequiredImageSize attribute applied to property '{0}' can only be applied to ContentReferences that inherit from ImageData";
+                ErrorMessage = "RequiredImageSize attribute applied to property '{0}' can only be applied to ContentReferences that inherit from IContentImage";
                 return false;
             }
                 

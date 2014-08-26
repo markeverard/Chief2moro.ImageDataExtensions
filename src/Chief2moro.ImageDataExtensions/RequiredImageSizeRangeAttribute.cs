@@ -47,7 +47,7 @@ namespace Chief2moro.ImageDataExtensions
             var imageData = content as IContentImage;
             if (imageData == null)
             {
-                ErrorMessage = "RequiredImageSize attribute applied to property '{0}' can only be applied to ContentReferences that inherit from ImageData";
+                ErrorMessage = "RequiredImageSize attribute applied to property '{0}' can only be applied to ContentReferences that inherit from IContentImage";
                 return false;
             }
 
@@ -74,8 +74,8 @@ namespace Chief2moro.ImageDataExtensions
 
         private bool IsSizeWithinRange(int actualSize, int minimumSize, int maximumSize)
         {
-            return (minimumSize > 0 ? minimumSize <= actualSize : true)
-                && (maximumSize > 0 ? maximumSize >= actualSize : true);
+            return (minimumSize <= 0 || minimumSize <= actualSize)
+                && (maximumSize <= 0 || maximumSize >= actualSize);
         }
 
         private string GetRequiredSizes()
