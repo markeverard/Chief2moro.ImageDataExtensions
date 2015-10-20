@@ -1,8 +1,8 @@
 ﻿using EPiServer.Core;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
+using EPiServer.Logging;
 using EPiServer.ServiceLocation;
-using log4net;
 
 namespace Chief2moro.ImageDataExtensions
 {
@@ -10,7 +10,7 @@ namespace Chief2moro.ImageDataExtensions
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
     public class ImageResizeDescriptorInitialization : IInitializableModule
     {
-        private static readonly ILog _logger = LogManager.GetLogger(typeof(ImageResizeDescriptorInitialization));
+        private static readonly ILogger _logger = LogManager.GetLogger(typeof(ImageResizeDescriptorInitialization));
 
         private bool _initialized;
         private readonly ImageResizeContentEvents _imageResizeContentEvents = new ImageResizeContentEvents();
@@ -22,7 +22,7 @@ namespace Chief2moro.ImageDataExtensions
 
             var contentEvents = ServiceLocator.Current.GetInstance<IContentEvents>();
             contentEvents.PublishingContent += _imageResizeContentEvents.contentEvents_PublishingContent;
-            _logger.Info("Event _imageResizeContentEvents.contentEvents_PublishingContent is handled");
+            _logger.Information("Event _imageResizeContentEvents.contentEvents_PublishingContent is handled");
             _initialized = true;
         }
 
@@ -35,7 +35,7 @@ namespace Chief2moro.ImageDataExtensions
         {
             var contentEvents = ServiceLocator.Current.GetInstance<IContentEvents>();
             contentEvents.PublishingContent -= _imageResizeContentEvents.contentEvents_PublishingContent;
-            _logger.Info("Event _imageResizeContentEvents.contentEvents_PublishingContent is removed");
+            _logger.Information("Event _imageResizeContentEvents.contentEvents_PublishingContent is removed");
         }
     }
 }
