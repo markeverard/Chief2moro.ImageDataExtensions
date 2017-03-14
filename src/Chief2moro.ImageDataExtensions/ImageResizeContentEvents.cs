@@ -2,10 +2,8 @@
 using System.Reflection;
 using EPiServer;
 using EPiServer.Core;
-using EPiServer.DataAnnotations;
 using EPiServer.Framework.Blobs;
 using EPiServer.ServiceLocation;
-using EPiServer.Core.Internal;
 
 namespace Chief2moro.ImageDataExtensions
 {
@@ -45,12 +43,11 @@ namespace Chief2moro.ImageDataExtensions
                     continue;
                 }
 
-                var calculatedDimensions = ImageResizeUtility.ResizeWidthMaintainAspectRatio(imageDimensions, requiredWidth);  
-                var imageDescriptor = new ImageDescriptorAttribute(calculatedDimensions.Height, calculatedDimensions.Width);
+                var processor = ServiceLocator.Current.GetInstance<IResizeBlobProcessor>();
+                var calculatedDimensions = ImageResizeUtility.ResizeWidthMaintainAspectRatio(imageDimensions, requiredWidth);
 
-                var thumbnailManager = ServiceLocator.Current.GetInstance<ThumbnailManager>();
-                var resizedBlob = thumbnailManager.CreateImageBlob(image.BinaryData, propertyInfo.Name, imageDescriptor);
-
+                var resizedBlob = processor.CreateImageBlob(image.BinaryData, calculatedDimensions, propertyInfo.Name);
+                
                 //assign blob to current property
                 propertyInfo.SetValue(image, resizedBlob, null);
             }

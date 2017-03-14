@@ -32,6 +32,9 @@ namespace Chief2moro.ImageDataExtensions
 
         public override bool IsValid(object value)
         {
+            if (value == null)
+                return true;
+            
             if (Height < 1 && Width < 1)
             {
                 ErrorMessage = "The allowed image height or image width must be specified within the validation attribute";
@@ -41,7 +44,7 @@ namespace Chief2moro.ImageDataExtensions
             if (contentReference == null)
             {
                 ErrorMessage = "RequiredImageSize attribute should only be applied to ContentReference properties";
-                return false;
+                return true;
             }
         
             var content = ServiceLocator.Current.GetInstance<IContentLoader>().Get<ContentData>(contentReference);
