@@ -164,7 +164,6 @@
     <Compile Include="ThumbnailManagerProcessor.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="Chief2moro.ImageDataExtensions.nuspec" />
     <None Include="packages.config" />
   </ItemGroup>
