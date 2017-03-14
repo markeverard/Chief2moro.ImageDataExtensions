@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Chief2moro.ImageDataExtensions")]
-[assembly: AssemblyDescription("A library allowing EPiServer developers to add image size validation and resizing for the EPiServer 9 CMS ImageData content type")]
+[assembly: AssemblyDescription("A library allowing EPiServer developers to add image size validation and resizing for the EPiServer 10 CMS ImageData content type")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mark Everard")]
 [assembly: AssemblyProduct("Chief2moro.ImageDataExtensions")]

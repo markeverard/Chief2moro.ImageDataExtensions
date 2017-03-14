@@ -11,6 +11,6 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <copyright>Copyright 2015</copyright>
-    <tags>EPiServer 10.0 ImageData Resize Validation</tags>
+    <tags>EPiServer10 ImageData Resize Validation EPiServerAddOn ThirdPartyAddon</tags>
   </metadata>
 </package>
