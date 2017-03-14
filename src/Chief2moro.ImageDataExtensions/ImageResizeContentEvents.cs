@@ -5,6 +5,7 @@ using EPiServer.Core;
 using EPiServer.DataAnnotations;
 using EPiServer.Framework.Blobs;
 using EPiServer.ServiceLocation;
+using EPiServer.Core.Internal;
 
 namespace Chief2moro.ImageDataExtensions
 {
