@@ -1,9 +1,18 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chief2moro.ImageDataExtensions", "Chief2moro.ImageDataExtensions\Chief2moro.ImageDataExtensions.csproj", "{1B3BE7C9-666E-4743-A944-5F70BC57DD7F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chief2moro.ImageDataExtensions.Test", "Chief2moro.ImageDataExtensions.Test\Chief2moro.ImageDataExtensions.Test.csproj", "{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chief2moro.ImageDataExtensions.ImageResizer", "Chief2moro.ImageDataExtensions.ImageResizer\Chief2moro.ImageDataExtensions.ImageResizer.csproj", "{DC2862D6-A5BE-4EC0-8530-6F9203686D07}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildScripts", "BuildScripts", "{3191C9D5-653F-40B9-A08E-3CDB1BB1B07B}"
+	ProjectSection(SolutionItems) = preProject
+		..\buildscripts\build-package.bat = ..\buildscripts\build-package.bat
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +28,10 @@ Global
 		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{188AA0AC-7811-4CC9-B73D-5CC0F2B694D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2862D6-A5BE-4EC0-8530-6F9203686D07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2862D6-A5BE-4EC0-8530-6F9203686D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2862D6-A5BE-4EC0-8530-6F9203686D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2862D6-A5BE-4EC0-8530-6F9203686D07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

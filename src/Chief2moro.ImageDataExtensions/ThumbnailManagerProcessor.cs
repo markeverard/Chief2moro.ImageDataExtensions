@@ -5,8 +5,7 @@ using EPiServer.ServiceLocation;
 
 namespace Chief2moro.ImageDataExtensions
 {
-    [ServiceConfiguration(ServiceType = typeof(IResizeBlobProcessor), Lifecycle = ServiceInstanceScope.HttpContext)]
-    public class ThumbnailManagerProcessor : IResizeBlobProcessor
+    internal class ThumbnailManagerProcessor : IResizeBlobProcessor
     {
         public Blob CreateImageBlob(Blob originalBlob, Dimensions requestedDimensions, string name)
         {

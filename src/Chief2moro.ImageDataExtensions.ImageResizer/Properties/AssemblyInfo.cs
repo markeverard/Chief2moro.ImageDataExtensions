@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Chief2moro.ImageDataExtensions")]
-[assembly: AssemblyDescription("A library allowing EPiServer developers to add image size validation and resizing for the EPiServer 10 CMS ImageData content type")]
+[assembly: AssemblyTitle("Chief2moro.ImageDataExtensions.ImageResizer")]
+[assembly: AssemblyDescription("A library extending Chief2moro.ImageDataExtensions allowing the resizing to be performed by the ImageResizer library")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Mark Everard")]
-[assembly: AssemblyProduct("Chief2moro.ImageDataExtensions")]
-[assembly: AssemblyCopyright("Copyright © Chief2moro 2017")]
+[assembly: AssemblyProduct("Chief2moro.ImageDataExtensions.ImageResizer")]
+[assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("8db26d05-130b-403c-8ed2-939723f242a3")]
+[assembly: Guid("dc2862d6-a5be-4ec0-8530-6f9203686d07")]
 
 // Version information for an assembly consists of the following four values:
 //
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
