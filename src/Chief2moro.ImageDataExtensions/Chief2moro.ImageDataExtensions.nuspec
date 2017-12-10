@@ -14,7 +14,7 @@
     <tags>EPiServer10 ImageData Resize Validation EPiServerAddOn ThirdPartyAddon</tags>
     <dependencies>
       <group targetFramework="net45">
-        <dependency id="EPiServer.CMS.Core" version="[10.0.0,11.0.0]" />
+        <dependency id="EPiServer.CMS.Core" version="[11.1.0,12.0.0]" />
       </group>
     </dependencies>
   </metadata>
