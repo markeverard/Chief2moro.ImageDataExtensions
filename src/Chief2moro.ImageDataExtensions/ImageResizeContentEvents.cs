@@ -2,7 +2,6 @@
 using System.Reflection;
 using EPiServer;
 using EPiServer.Core;
-using EPiServer.Core.Internal;
 using EPiServer.DataAnnotations;
 using EPiServer.Framework.Blobs;
 using EPiServer.ServiceLocation;
