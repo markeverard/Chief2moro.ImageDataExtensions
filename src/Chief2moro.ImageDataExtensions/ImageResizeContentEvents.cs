@@ -2,6 +2,7 @@
 using System.Reflection;
 using EPiServer;
 using EPiServer.Core;
+using EPiServer.Core.Internal;
 using EPiServer.DataAnnotations;
 using EPiServer.Framework.Blobs;
 using EPiServer.ServiceLocation;
@@ -12,16 +13,13 @@ namespace Chief2moro.ImageDataExtensions
     {
         public void contentEvents_PublishingContent(object sender, ContentEventArgs e)
         {
-            var content = e.Content;
-            if (!(content is ImageData)) 
+            var image = e.Content as ImageData;
+
+            if (image == null) 
                 return;
             
-            var image = content as ImageData;
-            Dimensions imageDimensions = ImageBlobUtility.GetDimensions(image.BinaryData);
-            
             PropertyInfo[] properties = image.GetType().GetProperties();
-            int requiredWidth = imageDimensions.Width;
-
+            
             foreach (var propertyInfo in properties)
             {
                 if (propertyInfo.PropertyType != typeof(Blob))
@@ -31,19 +29,15 @@ namespace Chief2moro.ImageDataExtensions
                 var imageWidthAttribute = (ImageWidthDescriptorAttribute)Attribute.GetCustomAttribute(propertyInfo, typeof(ImageWidthDescriptorAttribute));
                 var imageScaleAttribute = (ImageScaleDescriptorAttribute)Attribute.GetCustomAttribute(propertyInfo, typeof(ImageScaleDescriptorAttribute));
 
-                if (imageWidthAttribute != null)
-                {
-                    requiredWidth = imageWidthAttribute.Width;
-                }
-                else if (imageScaleAttribute != null)
-                {
-                    requiredWidth = (int) (imageDimensions.Width*imageScaleAttribute.DimensionMultiplier);
-                }
-                else
-                {
+                if (imageWidthAttribute == null && imageScaleAttribute == null)
                     continue;
-                }
 
+                var imageDimensions = ImageBlobUtility.GetDimensions(image.BinaryData);
+
+                var requiredWidth = imageWidthAttribute != null ? 
+                    imageWidthAttribute.Width :
+                    (int) (imageDimensions.Width * imageScaleAttribute.DimensionMultiplier);
+                
                 var calculatedDimensions = ImageResizeUtility.ResizeWidthMaintainAspectRatio(imageDimensions, requiredWidth);  
                 var imageDescriptor = new ImageDescriptorAttribute(calculatedDimensions.Height, calculatedDimensions.Width);
 
